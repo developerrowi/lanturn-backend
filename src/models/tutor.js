@@ -1,4 +1,4 @@
-const { Model } = require("sequelize");
+const { Model, Sequelize } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Tutor extends Model {
     /**
@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Tutor.init(
     {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
       email: {
         type: DataTypes.STRING,
         validate: {

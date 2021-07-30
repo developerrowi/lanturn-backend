@@ -8,7 +8,7 @@
     "db:create": "npx sequelize-cli db:create",
     "db:migrate": "npx sequelize-cli db:migrate",
     "test": "jest --testTimeout=30000  --watchAll --runInBand ",
-    "pretest": "cross-env NODE_ENV=test npm run db:reset:test", 
+    "pretest": "cross-env NODE_ENV=test npm run db:reset:test",
     "db:create:test": "cross-env NODE_ENV=test npx sequelize-cli db:create",
     "db:reset:test": "cross-env NODE_ENV=test npx sequelize-cli db:drop && cross-env NODE_ENV=test npx sequelize-cli db:create && cross-env NODE_ENV=test npx sequelize-cli db:migrate"
   },
@@ -44,7 +44,8 @@
     "joi": "^17.4.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.5.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "underscore": "^1.13.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
